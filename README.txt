@@ -1,5 +1,7 @@
 Guillaume Lajoie January 2014 (http://faculty.washington.edu/glajoie/wordpress/)
 
+DISCLAIMER: This software was design for specialized scientific computation only and is not meant as a deployable product. As a result, some warnings may appear at the time of compilation and some parameter settings may lead to errors.
+
 The Torus_Flow (TF) suite is a python/cython code implemented to simulate a network of theta-neurons of arbitrary size receiving white noise inputs. The code can record total trajectories of any number of neurons as well as spike times and estimates of Lyapunov Spectra of any truncated size.
 
 #####################################################
@@ -10,12 +12,9 @@ More details about the network model can be found in:
 -Structured chaos shapes spike-response noise entropy in balanced neural networks, Guillaume Lajoie, Jean-Philippe Thivierge and Eric Shea-Brown, Frontiers in Computational Neuroscience, (2014),  8:123
 #####################################################
 
-DISCLAIMER: This software was design for specialized scientific computation only and is not meant as a deployable product. As a result, some warnings may appear at the time of compilation and some parameter settings may lead to errors.
-
 REQUIREMENTS: Python3 and Cython must be installed. For an easy way to do this, install the latest conda distribution and make sure the Cython package is installed. MATLAB as the output data is saved in ".m" format.
 
 USE: The main script calling the code is entitled LOCAL_MAIN_TF.py. It is setup to launch multiple runs going through multiple parameter sets and initial conditions. The code itself is well documented. 
-
 
 FILES NEEDED in base directory: 
 1.Torus_Flow_Solver.pyx (the cython file of the solver)
@@ -30,4 +29,4 @@ QUICK START:
 There are two possible ways for quick use:
 (1) in terminal, navigate to directory containing code and type "python LOCAL_MAIN_TF.py"
 (2) run the python notebook "Basic TORUS_FLOW tutorial.ipynb" for interactive explanations.
-The output of simulations from each parameter set will be stored in a separate folder in "output/" in a MATLAB format. Each folder will have the run_name followed by four numbers identifying the parameter set form the sub run. See LOCAL_MAIN_TF.py for more details.
+The output of simulations from each parameter set will be stored in separate folders within "output/" in a MATLAB ".m" format. Each folder will have the run_name followed by four numbers identifying the parameter set form the sub run. See LOCAL_MAIN_TF.py for more details.
